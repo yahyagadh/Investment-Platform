@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="hhhhh.css">
+</head>
+<body>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false" disabled>Disabled</button>
+        </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="all">
+                <h1><span class="blue">&lt;</span>Les Projets Financés<span class="blue">&gt;</span>
+                </h1>
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1>Sites</h1>
+                            </th>
+                            <th>
+                                <h1>Views</h1>
+                            </th>
+                            <th>
+                                <h1>Clicks</h1>
+                            </th>
+                            <th>
+                                <h1>Average</h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Google</td>
+                            <td>9518</td>
+                            <td>6369</td>
+                            <td>01:32:50</td>
+                        </tr>
+                        <tr>
+                            <td>Twitter</td>
+                            <td>7326</td>
+                            <td>10437</td>
+                            <td>00:51:22</td>
+                        </tr>
+                        <tr>
+                            <td>Amazon</td>
+                            <td>4162</td>
+                            <td>5327</td>
+                            <td>00:24:34</td>
+                        </tr>
+                        <tr>
+                            <td>LinkedIn</td>
+                            <td>3654</td>
+                            <td>2961</td>
+                            <td>00:12:10</td>
+                        </tr>
+                        <tr>
+                            <td>CodePen</td>
+                            <td>2002</td>
+                            <td>4135</td>
+                            <td>00:46:19</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub</td>
+                            <td>4623</td>
+                            <td>3486</td>
+                            <td>00:31:52</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <h1>Welcome to our Website </h1>
+        <h3>Where the best investments be found</h3>
+        <p>Investing in capital risk holds the key to unlocking immense potential.
+             It's not just about financial gain; it's about fueling innovation and driving progress.
+              By taking calculated risks in diverse projects, investors position themselves at the forefront of opportunity.
+               Embrace the future, embrace capital risk, and pave the way for unprecedented growth and success.</p>
+        </div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <h3>Contenu de l'onglet Contact</h3>
+            <p>Ce contenu est spécifique à l'onglet Contact.</p>
+        </div>
+        <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab">
+            <h3>Contenu de l'onglet Disabled</h3>
+            <p>Ce contenu est spécifique à l'onglet Disabled.</p>
+            <p>Cet onglet est désactivé et ne peut pas être sélectionné.</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Récupérer tous les boutons de navigation
+            var navButtons = document.querySelectorAll('.nav-link');
+    
+            // Ajouter un écouteur d'événements à chaque bouton
+            navButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    // Récupérer l'identifiant de la cible à partir de l'attribut data-bs-target
+                    var targetId = this.getAttribute('data-bs-target');
+                    // Récupérer l'élément cible
+                    var targetElement = document.querySelector(targetId);
+                    // Afficher l'élément cible et masquer les autres éléments
+                    var tabContents = document.querySelectorAll('.tab-pane');
+                    tabContents.forEach(function(content) {
+                        if (content === targetElement) {
+                            content.classList.add('show', 'active');
+                        } else {
+                            content.classList.remove('show', 'active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
